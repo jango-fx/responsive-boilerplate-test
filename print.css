@@ -1,0 +1,31 @@
+body{
+    max-width: 100%;
+    min-width: 100%;
+    border: solid red;
+}
+
+.category{
+    background-color: white;
+    border: dotted blue 1px;
+    width: calc(100% - 20px);
+    padding: 10px 10px 20px 10px;
+    page-break-after: always;
+}
+
+.project{
+    width: 100%;
+    float: none;
+    margin: 0px 0px 10px 0px;
+    height: calc(213px * 2);	
+    page-break-inside: avoid;
+}
+
+.project.active
+{
+    opacity:1.0;
+    background-color: rgba(200,200,200,1.0);
+
+    width: calc((100%) - (4px));	
+    width: -webkit-calc((100%) - (4px));	
+    height: calc(213px * 2);	
+}

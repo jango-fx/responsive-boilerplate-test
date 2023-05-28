@@ -1,0 +1,58 @@
+html
+{	
+	background-color:lightblue;
+
+	height:100%;
+	width:100%;
+	padding:0px;
+}
+	
+header
+{
+	background-color: #333;
+	color: white;
+}
+
+body
+{
+	box-sizing: border-box;
+	background-color:white;	
+
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+footer
+{
+	background-color: #333;
+	color: white;
+	clear: both;
+}
+
+.category
+{
+}
+
+.project
+{
+	background-color: lightblue;
+	width: auto;
+	width: -webkit-calc((100%) - (4px));	
+	height: 50px;
+	margin: 2px;
+	clear: both;
+	float: none;
+
+	cursor: pointer;
+}
+
+.project.active
+{
+	opacity:0.5;
+	width: calc((100%) - (4px));	
+	width: -webkit-calc((100%) - (4px));	
+	height: 213px;	
+}

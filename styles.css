@@ -1,0 +1,148 @@
+/* SCREEN 3 Column Layout */
+
+html
+{	
+	background-color:lightblue;
+
+	height:100%;
+	width:100%;
+	padding:0px;
+}
+header
+{
+	background-color: #333;
+	color: white;
+}
+body
+{
+	box-sizing: border-box;
+	background-color:white;
+
+	max-width: 1024px ;
+	margin: 0px auto;
+}
+
+footer
+{
+	background-color: #333;
+	color: white;
+	clear: both;
+}
+
+.category
+{
+	padding: 1px 0px;
+	margin: 10px 0px;
+	background-color: lightpink;
+}
+
+.project
+{
+	background-color: rgba(200,200,200,1.0);
+	margin: 2px;
+	float: left;
+	width: calc((33.33%) - (4px));
+	width: -webkit-calc((33.33%) - (4px));	
+	height: 213px;
+	cursor: pointer;
+	transition: 1.0s;;
+}
+
+.project.active
+{
+	opacity:0.5;
+	background-color: red;
+
+	width: calc((100%) - (4px));	
+	width: -webkit-calc((100%) - (4px));	
+	height: calc(213px * 2);	
+}
+
+
+
+/* TABLET LAYOUT */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	
+	body
+	{
+		max-width: 768px ;
+		margin-left: auto ;
+		margin-right: auto ;
+		padding: 0px;	
+	}
+	
+	.category
+	{
+		padding: 0px;
+	}
+	
+	.project
+	{
+		width: calc((50%) - (4px));	
+		background-color: green;
+		float: left;
+	}
+	
+	.project.active
+	{
+		height: calc(213px * 2);	
+	}
+}
+
+/* PHONE LAYOUT */
+@media only screen and (max-width : 480px) {
+	body
+	{
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0;
+	}
+	
+	.project
+	{
+		background-color: blue;
+		width: 100%;
+		max-width: 100%;
+		height: 50px;
+		clear: both;
+		float: none;
+	}
+	.active
+	{
+		height: 213px;	
+	}
+}
+
+@media print{
+	body{
+		max-width: 100%;
+		min-width: 100%;
+		border: solid red;
+	}
+	
+	.category{
+		width: calc(100% - 20px);
+		padding: 10px 10px 20px 10px;
+		page-break-after: always;
+	}
+	
+	.project{
+		width: 100%;
+		float: none;
+		margin: 0px 0px 10px 0px;
+		height: calc(213px * 2);	
+		page-break-inside: avoid;
+	}
+	
+	.project.active
+	{
+		opacity:1.0;
+		background-color: rgba(200,200,200,1.0);
+	
+		width: calc((100%) - (4px));	
+		width: -webkit-calc((100%) - (4px));	
+		height: calc(213px * 2);	
+	}
+}

@@ -1,0 +1,24 @@
+body
+{
+    max-width: 768px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    padding: 0px;	
+}
+
+.category
+{
+    padding: 0px;
+}
+
+.project
+{
+    width: calc((50%) - (4px));	
+    background-color: seagreen;
+    float: left;
+}
+
+.project.active
+{
+    height: calc(213px * 2);	
+}
